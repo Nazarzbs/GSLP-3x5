@@ -59,6 +59,7 @@ enum Resources {
         
         enum Common {
             static let downArrow = UIImage(named: "down_arrow")
+            static let add = UIImage(named: "add_button")
         }
     }
     
