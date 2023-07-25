@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE601B492A6F36C500AC4DCD /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B482A6F36C500AC4DCD /* NavBarController.swift */; };
+		CE601B4F2A6F3A1800AC4DCD /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B4E2A6F3A1800AC4DCD /* BaseController.swift */; };
+		CE601B532A6F3F4B00AC4DCD /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B522A6F3F4B00AC4DCD /* UIView+ext.swift */; };
+		CE601B652A70168B00AC4DCD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B642A70168B00AC4DCD /* SettingsController.swift */; };
+		CE601B672A70169A00AC4DCD /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B662A70169A00AC4DCD /* ProgressController.swift */; };
+		CE601B6B2A7016CD00AC4DCD /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B6A2A7016CD00AC4DCD /* SessionController.swift */; };
 		CE6931EA2A6F02F800851F22 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931E92A6F02F800851F22 /* UIColor+ext.swift */; };
 		CE6931F02A6F052500851F22 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931EF2A6F052500851F22 /* Resources.swift */; };
 		CE8929852A6DF4CF0088081D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929842A6DF4CF0088081D /* AppDelegate.swift */; };
 		CE8929872A6DF4CF0088081D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929862A6DF4CF0088081D /* SceneDelegate.swift */; };
-		CE8929892A6DF4CF0088081D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929882A6DF4CF0088081D /* ViewController.swift */; };
+		CE8929892A6DF4CF0088081D /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929882A6DF4CF0088081D /* OverviewController.swift */; };
 		CE89298E2A6DF4D00088081D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE89298D2A6DF4D00088081D /* Assets.xcassets */; };
 		CE8929912A6DF4D00088081D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE89298F2A6DF4D00088081D /* LaunchScreen.storyboard */; };
 		CE8929BF2A6EB7FA0088081D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929BE2A6EB7FA0088081D /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE601B482A6F36C500AC4DCD /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
+		CE601B4E2A6F3A1800AC4DCD /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		CE601B522A6F3F4B00AC4DCD /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
+		CE601B642A70168B00AC4DCD /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		CE601B662A70169A00AC4DCD /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
+		CE601B6A2A7016CD00AC4DCD /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		CE6931E92A6F02F800851F22 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		CE6931EF2A6F052500851F22 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		CE8929812A6DF4CF0088081D /* GSLP 3x5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GSLP 3x5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8929842A6DF4CF0088081D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8929862A6DF4CF0088081D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE8929882A6DF4CF0088081D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE8929882A6DF4CF0088081D /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
 		CE89298D2A6DF4D00088081D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8929902A6DF4D00088081D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8929922A6DF4D00088081D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,11 +53,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE601B4A2A6F39AD00AC4DCD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B5B2A6F42D300AC4DCD /* Settings */,
+				CE601B5A2A6F42CA00AC4DCD /* Progress */,
+				CE601B592A6F42BF00AC4DCD /* Session */,
+				CE601B572A6F42A000AC4DCD /* Overview */,
+				CE601B542A6F425500AC4DCD /* Base */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE601B542A6F425500AC4DCD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B482A6F36C500AC4DCD /* NavBarController.swift */,
+				CE601B4E2A6F3A1800AC4DCD /* BaseController.swift */,
+				CE8929BE2A6EB7FA0088081D /* TabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE601B572A6F42A000AC4DCD /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				CE8929882A6DF4CF0088081D /* OverviewController.swift */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		CE601B592A6F42BF00AC4DCD /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B6A2A7016CD00AC4DCD /* SessionController.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		CE601B5A2A6F42CA00AC4DCD /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B662A70169A00AC4DCD /* ProgressController.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		CE601B5B2A6F42D300AC4DCD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B642A70168B00AC4DCD /* SettingsController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		CE6931E82A6F02E700851F22 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CE6931EB2A6F030B00851F22 /* Extention */,
 				CE6931EF2A6F052500851F22 /* Resources.swift */,
+				CE6931EB2A6F030B00851F22 /* Extention */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -54,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6931E92A6F02F800851F22 /* UIColor+ext.swift */,
+				CE601B522A6F3F4B00AC4DCD /* UIView+ext.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -80,8 +147,7 @@
 				CE6931E82A6F02E700851F22 /* Helpers */,
 				CE8929BA2A6DF82B0088081D /* SupportingFIles */,
 				CE8929B92A6DF7BB0088081D /* Application */,
-				CE8929882A6DF4CF0088081D /* ViewController.swift */,
-				CE8929BE2A6EB7FA0088081D /* TabBarController.swift */,
+				CE601B4A2A6F39AD00AC4DCD /* Controllers */,
 			);
 			path = "GSLP 3x5";
 			sourceTree = "<group>";
@@ -175,11 +241,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8929892A6DF4CF0088081D /* ViewController.swift in Sources */,
+				CE8929892A6DF4CF0088081D /* OverviewController.swift in Sources */,
 				CE8929BF2A6EB7FA0088081D /* TabBarController.swift in Sources */,
 				CE8929852A6DF4CF0088081D /* AppDelegate.swift in Sources */,
+				CE601B492A6F36C500AC4DCD /* NavBarController.swift in Sources */,
 				CE6931F02A6F052500851F22 /* Resources.swift in Sources */,
+				CE601B672A70169A00AC4DCD /* ProgressController.swift in Sources */,
 				CE8929872A6DF4CF0088081D /* SceneDelegate.swift in Sources */,
+				CE601B652A70168B00AC4DCD /* SettingsController.swift in Sources */,
+				CE601B532A6F3F4B00AC4DCD /* UIView+ext.swift in Sources */,
+				CE601B4F2A6F3A1800AC4DCD /* BaseController.swift in Sources */,
+				CE601B6B2A7016CD00AC4DCD /* SessionController.swift in Sources */,
 				CE6931EA2A6F02F800851F22 /* UIColor+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
