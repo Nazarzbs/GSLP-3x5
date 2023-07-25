@@ -13,6 +13,7 @@
 		CE601B652A70168B00AC4DCD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B642A70168B00AC4DCD /* SettingsController.swift */; };
 		CE601B672A70169A00AC4DCD /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B662A70169A00AC4DCD /* ProgressController.swift */; };
 		CE601B6B2A7016CD00AC4DCD /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B6A2A7016CD00AC4DCD /* SessionController.swift */; };
+		CE601B712A7035AB00AC4DCD /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B702A7035AB00AC4DCD /* SecondaryButton.swift */; };
 		CE6931EA2A6F02F800851F22 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931E92A6F02F800851F22 /* UIColor+ext.swift */; };
 		CE6931F02A6F052500851F22 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931EF2A6F052500851F22 /* Resources.swift */; };
 		CE8929852A6DF4CF0088081D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929842A6DF4CF0088081D /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 		CE601B642A70168B00AC4DCD /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		CE601B662A70169A00AC4DCD /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
 		CE601B6A2A7016CD00AC4DCD /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		CE601B702A7035AB00AC4DCD /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		CE6931E92A6F02F800851F22 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		CE6931EF2A6F052500851F22 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		CE8929812A6DF4CF0088081D /* GSLP 3x5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GSLP 3x5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 		CE601B572A6F42A000AC4DCD /* Overview */ = {
 			isa = PBXGroup;
 			children = (
+				CE601B6C2A70355600AC4DCD /* View */,
 				CE8929882A6DF4CF0088081D /* OverviewController.swift */,
 			);
 			path = Overview;
@@ -105,6 +108,14 @@
 				CE601B642A70168B00AC4DCD /* SettingsController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE601B6C2A70355600AC4DCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B702A7035AB00AC4DCD /* SecondaryButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CE6931E82A6F02E700851F22 /* Helpers */ = {
@@ -247,6 +258,7 @@
 				CE601B492A6F36C500AC4DCD /* NavBarController.swift in Sources */,
 				CE6931F02A6F052500851F22 /* Resources.swift in Sources */,
 				CE601B672A70169A00AC4DCD /* ProgressController.swift in Sources */,
+				CE601B712A7035AB00AC4DCD /* SecondaryButton.swift in Sources */,
 				CE8929872A6DF4CF0088081D /* SceneDelegate.swift in Sources */,
 				CE601B652A70168B00AC4DCD /* SettingsController.swift in Sources */,
 				CE601B532A6F3F4B00AC4DCD /* UIView+ext.swift in Sources */,
