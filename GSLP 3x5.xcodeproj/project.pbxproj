@@ -16,6 +16,9 @@
 		CE601B712A7035AB00AC4DCD /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B702A7035AB00AC4DCD /* SecondaryButton.swift */; };
 		CE601B732A706ACA00AC4DCD /* OverviewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B722A706ACA00AC4DCD /* OverviewNavBar.swift */; };
 		CE601B772A706B5100AC4DCD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B762A706B5000AC4DCD /* BaseView.swift */; };
+		CE601B7F2A7197E300AC4DCD /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B7E2A7197E300AC4DCD /* WeekView.swift */; };
+		CE601B832A71A4FD00AC4DCD /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B822A71A4FD00AC4DCD /* WeekdayView.swift */; };
+		CE601B872A71E72100AC4DCD /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B862A71E72100AC4DCD /* Date+ext.swift */; };
 		CE6931EA2A6F02F800851F22 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931E92A6F02F800851F22 /* UIColor+ext.swift */; };
 		CE6931F02A6F052500851F22 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931EF2A6F052500851F22 /* Resources.swift */; };
 		CE8929852A6DF4CF0088081D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929842A6DF4CF0088081D /* AppDelegate.swift */; };
@@ -36,6 +39,9 @@
 		CE601B702A7035AB00AC4DCD /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		CE601B722A706ACA00AC4DCD /* OverviewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavBar.swift; sourceTree = "<group>"; };
 		CE601B762A706B5000AC4DCD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CE601B7E2A7197E300AC4DCD /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		CE601B822A71A4FD00AC4DCD /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
+		CE601B862A71E72100AC4DCD /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
 		CE6931E92A6F02F800851F22 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		CE6931EF2A6F052500851F22 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		CE8929812A6DF4CF0088081D /* GSLP 3x5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GSLP 3x5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,10 +124,20 @@
 		CE601B6C2A70355600AC4DCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE601B7D2A7197D600AC4DCD /* WeekView */,
 				CE601B702A7035AB00AC4DCD /* SecondaryButton.swift */,
 				CE601B722A706ACA00AC4DCD /* OverviewNavBar.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CE601B7D2A7197D600AC4DCD /* WeekView */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B7E2A7197E300AC4DCD /* WeekView.swift */,
+				CE601B822A71A4FD00AC4DCD /* WeekdayView.swift */,
+			);
+			path = WeekView;
 			sourceTree = "<group>";
 		};
 		CE6931E82A6F02E700851F22 /* Helpers */ = {
@@ -138,6 +154,7 @@
 			children = (
 				CE6931E92A6F02F800851F22 /* UIColor+ext.swift */,
 				CE601B522A6F3F4B00AC4DCD /* UIView+ext.swift */,
+				CE601B862A71E72100AC4DCD /* Date+ext.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -258,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE601B7F2A7197E300AC4DCD /* WeekView.swift in Sources */,
 				CE8929892A6DF4CF0088081D /* OverviewController.swift in Sources */,
 				CE8929BF2A6EB7FA0088081D /* TabBarController.swift in Sources */,
 				CE601B732A706ACA00AC4DCD /* OverviewNavBar.swift in Sources */,
@@ -266,11 +284,13 @@
 				CE6931F02A6F052500851F22 /* Resources.swift in Sources */,
 				CE601B672A70169A00AC4DCD /* ProgressController.swift in Sources */,
 				CE601B712A7035AB00AC4DCD /* SecondaryButton.swift in Sources */,
+				CE601B872A71E72100AC4DCD /* Date+ext.swift in Sources */,
 				CE8929872A6DF4CF0088081D /* SceneDelegate.swift in Sources */,
 				CE601B652A70168B00AC4DCD /* SettingsController.swift in Sources */,
 				CE601B532A6F3F4B00AC4DCD /* UIView+ext.swift in Sources */,
 				CE601B4F2A6F3A1800AC4DCD /* BaseController.swift in Sources */,
 				CE601B772A706B5100AC4DCD /* BaseView.swift in Sources */,
+				CE601B832A71A4FD00AC4DCD /* WeekdayView.swift in Sources */,
 				CE601B6B2A7016CD00AC4DCD /* SessionController.swift in Sources */,
 				CE6931EA2A6F02F800851F22 /* UIColor+ext.swift in Sources */,
 			);
