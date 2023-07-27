@@ -7,6 +7,8 @@
 
 import UIKit
 
+typealias R = Resources
+
 enum Resources {
     enum Colors {
         static let active = UIColor(hexString: "#437BFE")
@@ -21,10 +23,14 @@ enum Resources {
     
     enum Strings {
         enum TabBar {
-            static let overview = "Overview"
-            static let session = "Session"
-            static let progress = "Progress"
-            static let settings = "Settings"
+            static func title(for tab: Tabs) -> String {
+                switch tab {
+                case .overview: "Overview"
+                case .progress: "Progress"
+                case .session: "Session"
+                case .settings: "Settings"
+                }
+            }
         }
         
         enum NavBar {
@@ -51,10 +57,14 @@ enum Resources {
     
     enum Images {
         enum TabBar {
-            static let overview = UIImage(named: "overview_tab")
-            static let session = UIImage(named: "session_tab")
-            static let progress = UIImage(named: "progress_tab")
-            static let settings = UIImage(named: "settings_tab")
+            static func icon(for tab: Tabs) -> UIImage? {
+                switch tab {
+                case .overview: UIImage(named: "overview_tab")
+                case .progress: UIImage(named: "progress_tab")
+                case .session: UIImage(named: "session_tab")
+                case .settings: UIImage(named: "settings_tab")
+                }
+            }
         }
         
         enum Common {

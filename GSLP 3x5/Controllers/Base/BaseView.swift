@@ -11,9 +11,9 @@ class BaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addViews()
-        layoutViews()
-        configureView()
+        setupViews()
+        configureAppearance()
+        constraintViews()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -23,15 +23,15 @@ class BaseView: UIView {
 
 @objc
 extension BaseView {
-    func addViews() {
+    func setupViews() {
         
     }
     
-    func layoutViews() {
-        
+    func configureAppearance() {
+        backgroundColor = .white
     }
     
-    func configureView() {
+    func constraintViews() {
         
     }
 }

@@ -19,8 +19,9 @@
 		CE601B7F2A7197E300AC4DCD /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B7E2A7197E300AC4DCD /* WeekView.swift */; };
 		CE601B832A71A4FD00AC4DCD /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B822A71A4FD00AC4DCD /* WeekdayView.swift */; };
 		CE601B872A71E72100AC4DCD /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B862A71E72100AC4DCD /* Date+ext.swift */; };
+		CE601B8F2A7205D900AC4DCD /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B8E2A7205D900AC4DCD /* BaseInfoView.swift */; };
 		CE6931EA2A6F02F800851F22 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931E92A6F02F800851F22 /* UIColor+ext.swift */; };
-		CE6931F02A6F052500851F22 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931EF2A6F052500851F22 /* Resources.swift */; };
+		CE6931F02A6F052500851F22 /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6931EF2A6F052500851F22 /* R.swift */; };
 		CE8929852A6DF4CF0088081D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929842A6DF4CF0088081D /* AppDelegate.swift */; };
 		CE8929872A6DF4CF0088081D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929862A6DF4CF0088081D /* SceneDelegate.swift */; };
 		CE8929892A6DF4CF0088081D /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929882A6DF4CF0088081D /* OverviewController.swift */; };
@@ -42,8 +43,9 @@
 		CE601B7E2A7197E300AC4DCD /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		CE601B822A71A4FD00AC4DCD /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
 		CE601B862A71E72100AC4DCD /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
+		CE601B8E2A7205D900AC4DCD /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
 		CE6931E92A6F02F800851F22 /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
-		CE6931EF2A6F052500851F22 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		CE6931EF2A6F052500851F22 /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 		CE8929812A6DF4CF0088081D /* GSLP 3x5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GSLP 3x5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8929842A6DF4CF0088081D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8929862A6DF4CF0088081D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		CE601B4A2A6F39AD00AC4DCD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE601B882A71F7BC00AC4DCD /* Navigation */,
 				CE601B5B2A6F42D300AC4DCD /* Settings */,
 				CE601B5A2A6F42CA00AC4DCD /* Progress */,
 				CE601B592A6F42BF00AC4DCD /* Session */,
@@ -80,9 +83,8 @@
 		CE601B542A6F425500AC4DCD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				CE601B482A6F36C500AC4DCD /* NavBarController.swift */,
+				CE601B8D2A7205C900AC4DCD /* Views */,
 				CE601B4E2A6F3A1800AC4DCD /* BaseController.swift */,
-				CE8929BE2A6EB7FA0088081D /* TabBarController.swift */,
 				CE601B762A706B5000AC4DCD /* BaseView.swift */,
 			);
 			path = Base;
@@ -140,10 +142,27 @@
 			path = WeekView;
 			sourceTree = "<group>";
 		};
+		CE601B882A71F7BC00AC4DCD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B482A6F36C500AC4DCD /* NavBarController.swift */,
+				CE8929BE2A6EB7FA0088081D /* TabBarController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CE601B8D2A7205C900AC4DCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE601B8E2A7205D900AC4DCD /* BaseInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CE6931E82A6F02E700851F22 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CE6931EF2A6F052500851F22 /* Resources.swift */,
+				CE6931EF2A6F052500851F22 /* R.swift */,
 				CE6931EB2A6F030B00851F22 /* Extention */,
 			);
 			path = Helpers;
@@ -281,9 +300,10 @@
 				CE601B732A706ACA00AC4DCD /* OverviewNavBar.swift in Sources */,
 				CE8929852A6DF4CF0088081D /* AppDelegate.swift in Sources */,
 				CE601B492A6F36C500AC4DCD /* NavBarController.swift in Sources */,
-				CE6931F02A6F052500851F22 /* Resources.swift in Sources */,
+				CE6931F02A6F052500851F22 /* R.swift in Sources */,
 				CE601B672A70169A00AC4DCD /* ProgressController.swift in Sources */,
 				CE601B712A7035AB00AC4DCD /* SecondaryButton.swift in Sources */,
+				CE601B8F2A7205D900AC4DCD /* BaseInfoView.swift in Sources */,
 				CE601B872A71E72100AC4DCD /* Date+ext.swift in Sources */,
 				CE8929872A6DF4CF0088081D /* SceneDelegate.swift in Sources */,
 				CE601B652A70168B00AC4DCD /* SettingsController.swift in Sources */,
