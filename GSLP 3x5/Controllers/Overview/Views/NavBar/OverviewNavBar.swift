@@ -8,16 +8,34 @@
 import UIKit
 
 final class OverviewNavBar: BaseView {
-    private let allWorkoutsButton = SecondaryButton()
-    private let addButton = UIButton()
-    private let titleLabel = UILabel()
+    
+    private let allWorkoutsButton: GSButton = {
+        let allWorkoutsButton = GSButton(with: .secondary)
+        allWorkoutsButton.setTitle(R.Strings.Overview.allWorkoutsButton)
+        return allWorkoutsButton
+    }()
+
+    private let addButton: UIButton = {
+        let addButton = UIButton()
+        addButton.setImage(R.Images.Common.add, for: .normal)
+        return addButton
+    }()
+    
+    
+    private let titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        
+        titleLabel.text = R.Strings.NavBar.overview
+        titleLabel.font = R.Fonts.helvelticaRegular(with: 22)
+        titleLabel.textColor = R.Colors.titleGray
+        return titleLabel
+    }()
     
     private let weekView = WeekView()
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        addBottomBorder(with: R.Colors.separator, height: 1)
     }
     
     func addAllWorkoutsAction(_ action: Selector, with target: Any?) {
@@ -40,13 +58,7 @@ extension OverviewNavBar {
     override func configureAppearance() {
         super.configureAppearance()
         backgroundColor = .white
-        
-        titleLabel.text = R.Strings.NavBar.overview
-        titleLabel.font = R.Fonts.helvelticaRegular(with: 22)
-        
-        allWorkoutsButton.setTitle(R.Strings.Overview.allWorkoutsButton)
       
-        addButton.setImage(R.Images.Common.add, for: .normal)
     }
     
     override func constraintViews() {
@@ -61,7 +73,6 @@ extension OverviewNavBar {
             allWorkoutsButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             allWorkoutsButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -15),
             allWorkoutsButton.heightAnchor.constraint(equalToConstant: 28),
-            allWorkoutsButton.widthAnchor.constraint(equalToConstant: 130),
             
             titleLabel.centerYAnchor.constraint(equalTo: addButton.centerYAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: allWorkoutsButton.leadingAnchor),

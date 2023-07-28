@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BaseInfoView: BaseView {
+final class GSBaseInfoView: BaseView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -15,6 +15,9 @@ final class BaseInfoView: BaseView {
         label.textColor = R.Colors.inActive
         return label
     }()
+    
+    private let button = GSButton(with: .primary)
+    
     private let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -24,9 +27,12 @@ final class BaseInfoView: BaseView {
         return view
     }()
     
-    init(with title: String? = nil, alignment: NSTextAlignment = .left) {
+    init(with title: String? = nil, buttonTitle: String? = nil) {
         titleLabel.text = title?.uppercased()
-        titleLabel.textAlignment = alignment
+        titleLabel.textAlignment = buttonTitle == nil ? .center : .left
+        
+        button.setTitle(buttonTitle)
+        button.isHidden = buttonTitle == nil ? true : false
         
         super.init(frame: .zero)
     }
@@ -35,13 +41,17 @@ final class BaseInfoView: BaseView {
         super.init(frame: .zero)
         
     }
+    
+    private func addButtonTarget(target: Any?, action: Selector) {
+        button.addTarget(action, action: action, for: .touchUpInside)
+    }
 }
 
-extension BaseInfoView {
+extension GSBaseInfoView {
     override func setupViews() {
         super.setupViews()
         
-        setupViews(contentView, titleLabel)
+        setupViews(contentView, titleLabel, button)
     }
     
     override func constraintViews() {
@@ -51,6 +61,10 @@ extension BaseInfoView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            button.trailingAnchor.constraint(equalTo: trailingAnchor),
+            button.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            button.heightAnchor.constraint(equalToConstant: 28),
             
             contentView.topAnchor.constraint(equalTo: titleLabel.text == nil ? topAnchor : titleLabel.bottomAnchor, constant: titleLabel.text == nil ? 0 : 10),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
