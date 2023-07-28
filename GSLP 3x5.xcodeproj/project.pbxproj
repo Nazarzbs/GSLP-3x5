@@ -28,6 +28,8 @@
 		CE89298E2A6DF4D00088081D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE89298D2A6DF4D00088081D /* Assets.xcassets */; };
 		CE8929912A6DF4D00088081D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE89298F2A6DF4D00088081D /* LaunchScreen.storyboard */; };
 		CE8929BF2A6EB7FA0088081D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929BE2A6EB7FA0088081D /* TabBarController.swift */; };
+		CEF73FF12A7415950091A643 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF73FF02A7415950091A643 /* TimerView.swift */; };
+		CEF73FF72A7416310091A643 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF73FF62A7416310091A643 /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		CE8929902A6DF4D00088081D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8929922A6DF4D00088081D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8929BE2A6EB7FA0088081D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CEF73FF02A7415950091A643 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		CEF73FF62A7416310091A643 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		CE601B592A6F42BF00AC4DCD /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				CEF73FEF2A74156B0091A643 /* Views */,
 				CE601B6A2A7016CD00AC4DCD /* SessionController.swift */,
 			);
 			path = Session;
@@ -232,6 +237,23 @@
 			path = NavBar;
 			sourceTree = "<group>";
 		};
+		CEF73FEF2A74156B0091A643 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF73FF22A7416040091A643 /* Timer */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF73FF22A7416040091A643 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				CEF73FF02A7415950091A643 /* TimerView.swift */,
+				CEF73FF62A7416310091A643 /* ProgressView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -312,6 +334,7 @@
 				CE601B672A70169A00AC4DCD /* ProgressController.swift in Sources */,
 				CE601B712A7035AB00AC4DCD /* GSButton.swift in Sources */,
 				CE601B8F2A7205D900AC4DCD /* GSBaseInfoView.swift in Sources */,
+				CEF73FF12A7415950091A643 /* TimerView.swift in Sources */,
 				CE601B872A71E72100AC4DCD /* Date+ext.swift in Sources */,
 				CE8929872A6DF4CF0088081D /* SceneDelegate.swift in Sources */,
 				CE601B652A70168B00AC4DCD /* SettingsController.swift in Sources */,
@@ -319,6 +342,7 @@
 				CE601B4F2A6F3A1800AC4DCD /* BaseController.swift in Sources */,
 				CE601B772A706B5100AC4DCD /* BaseView.swift in Sources */,
 				CE601B832A71A4FD00AC4DCD /* WeekdayView.swift in Sources */,
+				CEF73FF72A7416310091A643 /* ProgressView.swift in Sources */,
 				CE601B6B2A7016CD00AC4DCD /* SessionController.swift in Sources */,
 				CE6931EA2A6F02F800851F22 /* UIColor+ext.swift in Sources */,
 			);

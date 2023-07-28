@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class GSBaseInfoView: BaseView {
+class GSBaseInfoView: BaseView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
