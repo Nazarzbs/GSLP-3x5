@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseView: UIView {
+class GSBaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -22,7 +22,7 @@ class BaseView: UIView {
 }
 
 @objc
-extension BaseView {
+extension GSBaseView {
     func setupViews() {
         
     }

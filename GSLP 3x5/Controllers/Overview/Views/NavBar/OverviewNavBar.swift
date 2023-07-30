@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OverviewNavBar: BaseView {
+final class OverviewNavBar: GSBaseView {
     
     private let allWorkoutsButton: GSButton = {
         let allWorkoutsButton = GSButton(with: .secondary)

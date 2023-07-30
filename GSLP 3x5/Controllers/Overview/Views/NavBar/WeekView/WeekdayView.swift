@@ -7,7 +7,7 @@
 import UIKit
 
 extension WeekView {
-    final class WeekdayView: BaseView {
+    final class WeekdayView: GSBaseView {
         private let nameLabel = UILabel()
         private let dateLabel = UILabel()
         private let stackView = UIStackView()

@@ -15,7 +15,7 @@
 		CE601B6B2A7016CD00AC4DCD /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B6A2A7016CD00AC4DCD /* SessionController.swift */; };
 		CE601B712A7035AB00AC4DCD /* GSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B702A7035AB00AC4DCD /* GSButton.swift */; };
 		CE601B732A706ACA00AC4DCD /* OverviewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B722A706ACA00AC4DCD /* OverviewNavBar.swift */; };
-		CE601B772A706B5100AC4DCD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B762A706B5000AC4DCD /* BaseView.swift */; };
+		CE601B772A706B5100AC4DCD /* GSBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B762A706B5000AC4DCD /* GSBaseView.swift */; };
 		CE601B7F2A7197E300AC4DCD /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B7E2A7197E300AC4DCD /* WeekView.swift */; };
 		CE601B832A71A4FD00AC4DCD /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B822A71A4FD00AC4DCD /* WeekdayView.swift */; };
 		CE601B872A71E72100AC4DCD /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B862A71E72100AC4DCD /* Date+ext.swift */; };
@@ -30,6 +30,7 @@
 		CE8929BF2A6EB7FA0088081D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8929BE2A6EB7FA0088081D /* TabBarController.swift */; };
 		CEF73FF12A7415950091A643 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF73FF02A7415950091A643 /* TimerView.swift */; };
 		CEF73FF72A7416310091A643 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF73FF62A7416310091A643 /* ProgressView.swift */; };
+		CEF73FF92A75CB580091A643 /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF73FF82A75CB580091A643 /* PercentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,7 @@
 		CE601B6A2A7016CD00AC4DCD /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		CE601B702A7035AB00AC4DCD /* GSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSButton.swift; sourceTree = "<group>"; };
 		CE601B722A706ACA00AC4DCD /* OverviewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavBar.swift; sourceTree = "<group>"; };
-		CE601B762A706B5000AC4DCD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CE601B762A706B5000AC4DCD /* GSBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSBaseView.swift; sourceTree = "<group>"; };
 		CE601B7E2A7197E300AC4DCD /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		CE601B822A71A4FD00AC4DCD /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
 		CE601B862A71E72100AC4DCD /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		CE8929BE2A6EB7FA0088081D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CEF73FF02A7415950091A643 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		CEF73FF62A7416310091A643 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		CEF73FF82A75CB580091A643 /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				CE601B8E2A7205D900AC4DCD /* GSBaseInfoView.swift */,
-				CE601B762A706B5000AC4DCD /* BaseView.swift */,
+				CE601B762A706B5000AC4DCD /* GSBaseView.swift */,
 				CE601B702A7035AB00AC4DCD /* GSButton.swift */,
 			);
 			path = Views;
@@ -250,6 +252,7 @@
 			children = (
 				CEF73FF02A7415950091A643 /* TimerView.swift */,
 				CEF73FF62A7416310091A643 /* ProgressView.swift */,
+				CEF73FF82A75CB580091A643 /* PercentView.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -340,7 +343,8 @@
 				CE601B652A70168B00AC4DCD /* SettingsController.swift in Sources */,
 				CE601B532A6F3F4B00AC4DCD /* UIView+ext.swift in Sources */,
 				CE601B4F2A6F3A1800AC4DCD /* BaseController.swift in Sources */,
-				CE601B772A706B5100AC4DCD /* BaseView.swift in Sources */,
+				CEF73FF92A75CB580091A643 /* PercentView.swift in Sources */,
+				CE601B772A706B5100AC4DCD /* GSBaseView.swift in Sources */,
 				CE601B832A71A4FD00AC4DCD /* WeekdayView.swift in Sources */,
 				CEF73FF72A7416310091A643 /* ProgressView.swift in Sources */,
 				CE601B6B2A7016CD00AC4DCD /* SessionController.swift in Sources */,
