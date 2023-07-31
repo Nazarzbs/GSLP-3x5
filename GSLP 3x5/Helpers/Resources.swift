@@ -51,6 +51,10 @@ enum Resources {
             
             static let elapsedTime = "Elapsed Time"
             static let remainingTime = "Remaining Time"
+            
+            static let exercisesTitle = "Exercises"
+            static let exercisesButton = "Add"
+            
         }
         
         enum Progress {

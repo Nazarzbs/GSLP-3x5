@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1750EF2A772A2800F89D04 /* ExersiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1750EE2A772A2800F89D04 /* ExersiceCollectionViewCell.swift */; };
+		CE1750F12A773CDB00F89D04 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1750F02A773CDB00F89D04 /* ExercisesView.swift */; };
 		CE601B492A6F36C500AC4DCD /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B482A6F36C500AC4DCD /* NavBarController.swift */; };
 		CE601B4F2A6F3A1800AC4DCD /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B4E2A6F3A1800AC4DCD /* BaseController.swift */; };
 		CE601B532A6F3F4B00AC4DCD /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B522A6F3F4B00AC4DCD /* UIView+ext.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1750EE2A772A2800F89D04 /* ExersiceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExersiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE1750F02A773CDB00F89D04 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		CE601B482A6F36C500AC4DCD /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		CE601B4E2A6F3A1800AC4DCD /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		CE601B522A6F3F4B00AC4DCD /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE04ABB62A77269400E47505 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				CE1750EE2A772A2800F89D04 /* ExersiceCollectionViewCell.swift */,
+				CE1750F02A773CDB00F89D04 /* ExercisesView.swift */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
 		CE601B4A2A6F39AD00AC4DCD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +255,7 @@
 		CEF73FEF2A74156B0091A643 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE04ABB62A77269400E47505 /* Exercises */,
 				CEF73FF22A7416040091A643 /* Timer */,
 			);
 			path = Views;
@@ -330,6 +344,7 @@
 				CE601B7F2A7197E300AC4DCD /* WeekView.swift in Sources */,
 				CE8929892A6DF4CF0088081D /* OverviewController.swift in Sources */,
 				CE8929BF2A6EB7FA0088081D /* TabBarController.swift in Sources */,
+				CE1750F12A773CDB00F89D04 /* ExercisesView.swift in Sources */,
 				CE601B732A706ACA00AC4DCD /* OverviewNavBar.swift in Sources */,
 				CE8929852A6DF4CF0088081D /* AppDelegate.swift in Sources */,
 				CE601B492A6F36C500AC4DCD /* NavBarController.swift in Sources */,
@@ -346,6 +361,7 @@
 				CEF73FF92A75CB580091A643 /* PercentView.swift in Sources */,
 				CE601B772A706B5100AC4DCD /* GSBaseView.swift in Sources */,
 				CE601B832A71A4FD00AC4DCD /* WeekdayView.swift in Sources */,
+				CE1750EF2A772A2800F89D04 /* ExersiceCollectionViewCell.swift in Sources */,
 				CEF73FF72A7416310091A643 /* ProgressView.swift in Sources */,
 				CE601B6B2A7016CD00AC4DCD /* SessionController.swift in Sources */,
 				CE6931EA2A6F02F800851F22 /* UIColor+ext.swift in Sources */,
