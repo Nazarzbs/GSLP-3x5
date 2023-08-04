@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE1750EF2A772A2800F89D04 /* ExersiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1750EE2A772A2800F89D04 /* ExersiceCollectionViewCell.swift */; };
 		CE1750F12A773CDB00F89D04 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1750F02A773CDB00F89D04 /* ExercisesView.swift */; };
+		CE4F02502A785C490010B6F8 /* ExercisesCollectionViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F024F2A785C490010B6F8 /* ExercisesCollectionViewCellTableViewCell.swift */; };
 		CE601B492A6F36C500AC4DCD /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B482A6F36C500AC4DCD /* NavBarController.swift */; };
 		CE601B4F2A6F3A1800AC4DCD /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B4E2A6F3A1800AC4DCD /* BaseController.swift */; };
 		CE601B532A6F3F4B00AC4DCD /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601B522A6F3F4B00AC4DCD /* UIView+ext.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		CE1750EE2A772A2800F89D04 /* ExersiceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExersiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE1750F02A773CDB00F89D04 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		CE4F024F2A785C490010B6F8 /* ExercisesCollectionViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesCollectionViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		CE601B482A6F36C500AC4DCD /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		CE601B4E2A6F3A1800AC4DCD /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		CE601B522A6F3F4B00AC4DCD /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				CE1750EE2A772A2800F89D04 /* ExersiceCollectionViewCell.swift */,
 				CE1750F02A773CDB00F89D04 /* ExercisesView.swift */,
+				CE4F024F2A785C490010B6F8 /* ExercisesCollectionViewCellTableViewCell.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				CE601B672A70169A00AC4DCD /* ProgressController.swift in Sources */,
 				CE601B712A7035AB00AC4DCD /* GSButton.swift in Sources */,
 				CE601B8F2A7205D900AC4DCD /* GSBaseInfoView.swift in Sources */,
+				CE4F02502A785C490010B6F8 /* ExercisesCollectionViewCellTableViewCell.swift in Sources */,
 				CEF73FF12A7415950091A643 /* TimerView.swift in Sources */,
 				CE601B872A71E72100AC4DCD /* Date+ext.swift in Sources */,
 				CE8929872A6DF4CF0088081D /* SceneDelegate.swift in Sources */,

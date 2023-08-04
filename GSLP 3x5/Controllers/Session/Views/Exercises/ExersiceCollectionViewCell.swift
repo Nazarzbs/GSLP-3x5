@@ -7,20 +7,24 @@
 
 import UIKit
 
-class ExerciseCollectionViewCell: UICollectionViewCell {
-    static let identifier: String = "cell"
+final class ExerciseCollectionViewCell: UICollectionViewCell {
+   
+    static let identifier: String = "ExerciseCollectionViewCell"
     
-    var imageView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .blue
-        return view
+    var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(ExercisesCollectionViewCellTableViewCell.self, forCellReuseIdentifier: ExercisesCollectionViewCellTableViewCell.cellIdentifier)
+        tableView.clipsToBounds = true
+        return tableView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .green
-        contentView.addSubview(imageView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.backgroundColor = R.Colors.background
+        contentView.setupViews(tableView)
         setupConstraints()
         
     }
@@ -32,12 +36,10 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
-            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
-    
-
+            tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
+            tableView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
         ])
     }
     
@@ -46,5 +48,32 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
     }
 }
 
+extension ExerciseCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExercisesCollectionViewCellTableViewCell.cellIdentifier, for: indexPath) as? ExercisesCollectionViewCellTableViewCell else { fatalError() }
+        cell.configure()
+        let customSelectionView = ExercisesCollectionViewCellTableViewCell.CustomSelectionView()
+        customSelectionView.backgroundColor = R.Colors.inActive.withAlphaComponent(0.2)
+            cell.selectedBackgroundView = customSelectionView
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+        } else {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+        }
+    }
+}
     
 

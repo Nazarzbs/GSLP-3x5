@@ -35,8 +35,8 @@ extension BaseController {
     }
     
     func configureAppearance() {
-//        view.backgroundColor = R.Colors.background
-        view.backgroundColor = .black
+        view.backgroundColor = R.Colors.background
+      
     }
     
     func navBarLeftButtonHandler() {
