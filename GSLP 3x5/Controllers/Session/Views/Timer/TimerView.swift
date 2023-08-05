@@ -159,7 +159,7 @@ extension TimerView {
         super.constraintViews()
         
         NSLayoutConstraint.activate([
-            progressView.topAnchor.constraint(equalTo: topAnchor, constant: 40),
+            progressView.topAnchor.constraint(equalTo: topAnchor, constant: 15),
             progressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
             progressView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
             progressView.heightAnchor.constraint(equalTo: progressView.widthAnchor),

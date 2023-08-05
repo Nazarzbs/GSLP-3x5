@@ -21,6 +21,7 @@ enum Resources {
         static let titleGray = UIColor(hexString: "#545C77")
         
         static let backgroundSecondaryGray = UIColor(hexString: "#F2F1F6")
+        static let backgroundRepsNumberOrange = UIColor(hexString: "#F2A657")
     }
     
     enum Strings {

@@ -10,7 +10,7 @@ import UIKit
 final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
     
     static let cellIdentifier = "ExercisesCollectionViewCellTableViewCell"
-
+  
     private let prevLabel: UILabel = {
         let label = UILabel()
         label.text = "5x50kg"
@@ -21,7 +21,6 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
     
     private let numberLabel: UILabel = {
         let label = UILabel()
-        label.text = "1"
         label.font = R.Fonts.helvelticaRegular(with: 20)
         label.textAlignment = .center
         return label
@@ -70,9 +69,9 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
         return textField
     }()
     
-    private let roundedBackgroundView:  ExercisesCollectionViewCellTableViewCell.RoundedBackgroundView = {
+    private let roundedBackgroundViewForNumberLabel:  ExercisesCollectionViewCellTableViewCell.RoundedBackgroundView = {
         let roundedBackgroundView = ExercisesCollectionViewCellTableViewCell.RoundedBackgroundView()
-        roundedBackgroundView.backgroundColor = R.Colors.inActive.withAlphaComponent(0.5)
+       
 
         return roundedBackgroundView
     }()
@@ -81,14 +80,14 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-       
-        roundedBackgroundView.setupViews(numberLabel)
+        layer.cornerRadius = 12
+        roundedBackgroundViewForNumberLabel.setupViews(numberLabel)
         backgroundColor = .white
         kgTextField.delegate = self
         picker.delegate = self
         picker.dataSource = self
         pickerViewContainer.addSubview(picker)
-        contentView.setupViews(prevLabel, roundedBackgroundView, repsNumberButton,  pickerViewContainer, kgTextField)
+        contentView.setupViews(prevLabel, roundedBackgroundViewForNumberLabel, repsNumberButton,  pickerViewContainer, kgTextField)
         setupConstraints()
         self.accessoryType = UITableViewCell.AccessoryType.checkmark
     }
@@ -98,22 +97,23 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
     }
     
     //MARK: - Public
-    public func configure() {
-        
+    public func configure(_ data: String, color: UIColor) {
+        numberLabel.text = data
+        roundedBackgroundViewForNumberLabel.backgroundColor = color
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             prevLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            prevLabel.leadingAnchor.constraint(equalTo: roundedBackgroundView.trailingAnchor, constant: 8),
+            prevLabel.trailingAnchor.constraint(equalTo: repsNumberButton.leadingAnchor, constant: -15),
             
-            roundedBackgroundView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            roundedBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            roundedBackgroundView.heightAnchor.constraint(equalToConstant: 30),
-            roundedBackgroundView.widthAnchor.constraint(equalToConstant: 30),
+            roundedBackgroundViewForNumberLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            roundedBackgroundViewForNumberLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
+            roundedBackgroundViewForNumberLabel.heightAnchor.constraint(equalToConstant: 30),
+            roundedBackgroundViewForNumberLabel.widthAnchor.constraint(equalToConstant: 30),
             
-            numberLabel.centerYAnchor.constraint(equalTo: roundedBackgroundView.centerYAnchor),
-            numberLabel.centerXAnchor.constraint(equalTo: roundedBackgroundView.centerXAnchor),
+            numberLabel.centerYAnchor.constraint(equalTo: roundedBackgroundViewForNumberLabel.centerYAnchor),
+            numberLabel.centerXAnchor.constraint(equalTo: roundedBackgroundViewForNumberLabel.centerXAnchor),
            
             
             repsNumberButton.centerXAnchor.constraint(equalTo: pickerViewContainer.centerXAnchor),
@@ -123,7 +123,7 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
             
             
             pickerViewContainer.centerYAnchor.constraint(equalTo: centerYAnchor),
-            pickerViewContainer.leadingAnchor.constraint(equalTo: prevLabel.trailingAnchor, constant: 20),
+            pickerViewContainer.centerXAnchor.constraint(equalTo: centerXAnchor),
             pickerViewContainer.widthAnchor.constraint(equalToConstant:  80),
             pickerViewContainer.heightAnchor.constraint(equalToConstant: 55),
             
@@ -131,7 +131,7 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
             picker.centerYAnchor.constraint(equalTo: pickerViewContainer.centerYAnchor),
             
             kgTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
-            kgTextField.leadingAnchor.constraint(equalTo: repsNumberButton.trailingAnchor, constant: 20),
+            kgTextField.leadingAnchor.constraint(equalTo: repsNumberButton.trailingAnchor, constant: 10),
             kgTextField.widthAnchor.constraint(equalToConstant:  80),
             kgTextField.heightAnchor.constraint(equalToConstant: 45),
            
@@ -141,6 +141,7 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
     @objc
     func didTapRepsNumberButton() {
         UIView.animate(withDuration: 0.33, delay: 0) {
+            
             self.pickerViewContainer.isHidden = false
             self.pickerViewContainer.alpha = 1
             self.picker.isHidden = false
@@ -179,7 +180,7 @@ extension ExercisesCollectionViewCellTableViewCell: UIPickerViewDelegate, UIPick
     }
    
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        20
+        return 20
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -214,7 +215,6 @@ extension ExercisesCollectionViewCellTableViewCell: UITextFieldDelegate {
         textField.resignFirstResponder() // Hide the keyboard
         return true
     }
-
 }
 
 

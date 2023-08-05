@@ -9,6 +9,8 @@ import UIKit
 
 final class ExerciseCollectionViewCell: UICollectionViewCell {
    
+    private let text = ["W", "1", "2", "3", "4"]
+    
     static let identifier: String = "ExerciseCollectionViewCell"
     
     var tableView: UITableView = {
@@ -55,10 +57,12 @@ extension ExerciseCollectionViewCell: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ExercisesCollectionViewCellTableViewCell.cellIdentifier, for: indexPath) as? ExercisesCollectionViewCellTableViewCell else { fatalError() }
-        cell.configure()
+        cell.contentView.layer.cornerRadius = 8.0
         let customSelectionView = ExercisesCollectionViewCellTableViewCell.CustomSelectionView()
         customSelectionView.backgroundColor = R.Colors.inActive.withAlphaComponent(0.2)
-            cell.selectedBackgroundView = customSelectionView
+        customSelectionView.layer.cornerRadius = 10
+        cell.configure(text[indexPath.row], color: indexPath.row == 0 ? R.Colors.backgroundRepsNumberOrange.withAlphaComponent(0.3) : R.Colors.backgroundSecondaryGray)
+        cell.selectedBackgroundView = customSelectionView
         return cell
     }
     

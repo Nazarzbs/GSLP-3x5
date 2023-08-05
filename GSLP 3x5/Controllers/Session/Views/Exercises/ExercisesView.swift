@@ -8,34 +8,48 @@
 import UIKit
 
 final class ExercisesView: GSBaseView {
-    
+
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.numberOfPages = 5
+        pageControl.layer.cornerRadius = 5
+        pageControl.backgroundColor = R.Colors.separator.withAlphaComponent(1)
         return pageControl
     }()
     
     private let collectionView: UICollectionView = {
-        // Item
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-        // Group
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+      
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
+            // Item
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+            // Group
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            
+            // Define header
+            let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50))
+            let headerSupplementary = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+    
+             // Section
+             let section = NSCollectionLayoutSection(group: group)
+             section.orthogonalScrollingBehavior = .groupPaging
+             section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+           
+            section.boundarySupplementaryItems = [headerSupplementary]
+            section.orthogonalScrollingBehavior = .groupPaging
+            return section
+        }
         
-        // Section
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.layer.cornerRadius = 8
         collectionView.register(ExerciseCollectionViewCell.self, forCellWithReuseIdentifier: ExerciseCollectionViewCell.identifier)
+        
+        collectionView.register(ExercisesHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ExercisesHeaderCollectionReusableView.identifier)
+    
         return collectionView
     }()
-    
 }
 
 extension ExercisesView {
@@ -44,7 +58,7 @@ extension ExercisesView {
         pageControl.addTarget(self, action: #selector(pageControlDidChange), for: .valueChanged)
         collectionView.delegate = self
         collectionView.dataSource = self
-     
+       
         collectionView.backgroundColor = R.Colors.background
         setupViews(collectionView, pageControl)
     }
@@ -58,7 +72,7 @@ extension ExercisesView {
             collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            pageControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -2),
+            pageControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12),
             pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
             pageControl.heightAnchor.constraint(equalToConstant: 10),
           
@@ -72,7 +86,7 @@ extension ExercisesView {
     }
 }
 
-extension ExercisesView: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ExercisesView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // MARK: - UICollectionViewDataSource
     
@@ -90,6 +104,12 @@ extension ExercisesView: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ExercisesHeaderCollectionReusableView.identifier, for: indexPath) as? ExercisesHeaderCollectionReusableView else { fatalError("Unsupported") }
+    
+        return header
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

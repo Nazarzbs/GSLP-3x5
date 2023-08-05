@@ -57,7 +57,7 @@ extension SessionController {
             exercisesView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             exercisesView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 10),
             exercisesView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            exercisesView.heightAnchor.constraint(equalToConstant: 280),
+            exercisesView.heightAnchor.constraint(equalToConstant: 320),
         ])
         
     }
