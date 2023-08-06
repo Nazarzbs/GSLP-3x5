@@ -104,10 +104,6 @@ class ExercisesHeaderCollectionReusableView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    func setTitle(_ title: String) {
-//        label.text = title
-//    }
-    
     override func layoutSubviews() {
          super.layoutSubviews()
     }

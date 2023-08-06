@@ -15,7 +15,7 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
         let label = UILabel()
         label.text = "5x50kg"
         label.font = R.Fonts.helvelticaRegular(with: 22)
-        label.textColor = R.Colors.titleGray
+        label.textColor = .secondaryLabel.withAlphaComponent(0.5)
         return label
     }()
     
@@ -56,17 +56,35 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
         return  pickerViewContainer
     }()
 
-    private let kgTextField: UITextField = {
-        let textField = UITextField()
-        textField.textAlignment = .center
-        textField.layer.cornerRadius = 10.0
-        textField.backgroundColor = R.Colors.backgroundSecondaryGray
-        textField.textColor =  R.Colors.active
-        textField.font = UIFont.systemFont(ofSize: 22)
-        textField.layer.cornerRadius = 10.0
-        textField.backgroundColor = R.Colors.backgroundSecondaryGray
-        textField.text = "20"
-        return textField
+    private let kgTextField: UIButton = {
+        let title = 50
+        let button = UIButton()
+        
+        button.setTitle("\(title)", for: .normal)
+        button.setTitleColor(.blue, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 22)
+        button.layer.cornerRadius = 10.0
+        button.backgroundColor = R.Colors.backgroundSecondaryGray
+        
+        button.showsMenuAsPrimaryAction = true
+        
+        var actions = [UIAction]()
+
+        for i in 1...1000 {
+            let action = UIAction(title: "\(Double(i)/4.0)") { _ in
+               
+            }
+            
+            actions.append(action)
+        }
+        
+        actions[title].state = .on
+        let menu = UIMenu(title: "Select weight 🏋🏻", options: .singleSelection, children: actions)
+       
+        button.menu = menu
+        button.changesSelectionAsPrimaryAction = true
+
+        return button
     }()
     
     private let roundedBackgroundViewForNumberLabel:  ExercisesCollectionViewCellTableViewCell.RoundedBackgroundView = {
@@ -83,7 +101,6 @@ final class ExercisesCollectionViewCellTableViewCell: UITableViewCell {
         layer.cornerRadius = 12
         roundedBackgroundViewForNumberLabel.setupViews(numberLabel)
         backgroundColor = .white
-        kgTextField.delegate = self
         picker.delegate = self
         picker.dataSource = self
         pickerViewContainer.addSubview(picker)
@@ -208,13 +225,6 @@ extension ExercisesCollectionViewCellTableViewCell: UIPickerViewDelegate, UIPick
             label.textAlignment = .center
             return label
         }
-}
-
-extension ExercisesCollectionViewCellTableViewCell: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder() // Hide the keyboard
-        return true
-    }
 }
 
 

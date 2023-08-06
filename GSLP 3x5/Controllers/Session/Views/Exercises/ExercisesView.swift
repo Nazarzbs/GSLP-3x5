@@ -45,7 +45,7 @@ final class ExercisesView: GSBaseView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.layer.cornerRadius = 8
         collectionView.register(ExerciseCollectionViewCell.self, forCellWithReuseIdentifier: ExerciseCollectionViewCell.identifier)
-        
+        collectionView.isScrollEnabled = false
         collectionView.register(ExercisesHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ExercisesHeaderCollectionReusableView.identifier)
     
         return collectionView
@@ -102,16 +102,15 @@ extension ExercisesView: UICollectionViewDataSource, UICollectionViewDelegate, U
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExerciseCollectionViewCell.identifier, for: indexPath) as? ExerciseCollectionViewCell else {
             fatalError()
         }
-        
+        cell.cellIndex = indexPath.row
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ExercisesHeaderCollectionReusableView.identifier, for: indexPath) as? ExercisesHeaderCollectionReusableView else { fatalError("Unsupported") }
-    
+        
         return header
     }
-
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         pageControl.currentPage = indexPath.item
     }
